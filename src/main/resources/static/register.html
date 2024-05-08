@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>User Register</title>
+</head>
+<body>
+    <div class="background_image">
+        <img src="images/imagen%20fondo.png" alt="Imagen de Fondo">
+    </div>
+<div class="register-container">
+    <h1>User Register</h1>
+    <form>
+        <input type="text" id="txtNickname" placeholder="Nickname" class="required">
+        <input type="number" id="txtAge" placeholder="Age" class="required">
+        <input type="email" id="txtEmail" placeholder="Email" pattern=".+@gmail\.com" title="Email must end with @gmail.com" class="required">
+        <input type="password" id="txtPassword" placeholder="Password" class="required">
+        <input type="password" id="txtConfirmPassword" placeholder="Confirm Password" class="required">
+
+
+
+        <div class="question">
+            <p>¿In which position do you play?</p>
+            <label>
+                <input type="radio" name="position" value="Base"> Base
+            </label>
+            <label>
+                <input type="radio" name="position" value="Escolta"> Escolta
+            </label>
+            <label>
+                <input type="radio" name="position" value="Alero"> Alero
+            </label>
+            <label>
+                <input type="radio" name="position" value="Alero-pivot"> Alero-Pivot
+            </label>
+            <label>
+                <input type="radio" name="position" value="Pivot"> Pivot
+            </label>
+        </div>
+
+        <div class="question">
+            <p>¿Which is your level?</p>
+            <label>
+                <input type="radio" name="level" value="Disaster"> Disaster
+            </label>
+            <label>
+                <input type="radio" name="level" value="Rookie"> Rookie
+            </label>
+            <label>
+                <input type="radio" name="level" value="Amateur"> Amateur
+            </label>
+            <label>
+                <input type="radio" name="level" value="Competitive"> Competitive
+            </label>
+            <label>
+                <input type="radio" name="level" value="All-Star"> All-Star
+            </label>
+        </div>
+
+        <div class="question">
+            <p>¿Which is your physical level?</p>
+            <label>
+                <input type="radio" id="phy" name="physical" value="Really-bad"> Really Bad
+            </label>
+            <label>
+                <input type="radio" name="physical" value="Bad"> Bad
+            </label>
+            <label>
+                <input type="radio" name="physical" value="Average"> Average
+            </label>
+            <label>
+                <input type="radio" name="physical" value="Athletic"> Good One
+            </label>
+            <label>
+                <input type="radio" name="physical" value="Fantastic"> Fantastic
+            </label>
+        </div>
+
+        <button type="button" onclick="registerUser()" href="#">Register</button>
+    </form>
+</div>
+</body>
+<script src="js/register.js"></script>
+</html>

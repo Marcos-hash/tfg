@@ -1,0 +1,2078 @@
+body {
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: auto;
+    overflow-y: auto;
+    font-size: 20px;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    /* Ajusta el valor para controlar la opacidad de la imagen */
+    z-index: -1;
+    object-fit: cover;
+}
+
+.index {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: white;
+    /* Cambia el color del texto si es necesario */
+}
+
+.index button {
+    width: fit-content;
+    /* Ancho ajustado al contenido */
+    padding: 10px;
+    /* Espaciado reducido */
+    box-sizing: border-box;
+    background-color: #6b156e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.index button:hover {
+    background-color: #45a049;
+}
+
+.index h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.index p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.background_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: -1;
+    object-fit: cover;
+}
+
+/* Estilo para el formulario de registro */
+.register-container {
+    top: 5%;
+    position: absolute;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    /* Espacio entre los divs */
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    /* Sombra de texto para mejor legibilidad */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 30px auto;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+}
+
+.register-container h1 {
+    margin-top: 0%;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    background-image: url('images/fondoMatches2.png');
+    background-size: cover;
+    text-shadow: 2px 2px 4px #000000;
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
+
+.register-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+input.required {
+    border: 2px solid #6b156e;
+    margin-right: 5%;
+    width: 95%;
+    font-size:20px;
+}
+
+.register-container input {
+    border: 2px solid #6b156e;
+}
+
+.register-container input:hover {
+    border: 2px solid #45a049;
+}
+
+/* Estilo para las preguntas */
+.register-container .question {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-size:20px;
+}
+
+/* Estilo para las opciones de respuesta */
+.register-container input[type="radio"]::before {
+    margin-left: 20px;
+    margin-top: 5px;
+    border: 2px solid #6b156e;
+    border-radius: 50%;
+}
+
+.register-container input[type="radio"]:hover::before {
+    background-color: #45a049;
+}
+
+.register-container input[type="radio"]:checked::before {
+    background-color: #6b156e;
+}
+
+.register-container label {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.register-container button {
+    width: fit-content;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #6b156e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px auto 0;
+    font-size:20px;
+}
+
+.register-container button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para el formulario de login */
+.login-container {
+    width: 50%;
+    color: #fff;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    border-radius: 8px;
+    /* Bordes redondeados */
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+.login-container h1 {
+    margin-bottom: 15px;
+    font-size: 50px;
+    font-weight: bold;
+    background-image: url('images/fondoMatches2.png');
+    background-size: cover;
+    text-shadow: 2px 2px 4px #000000;
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    /* Centra los elementos horizontalmente */
+}
+
+.login-container input {
+    width: 50%;
+    font-size: 20px;
+    /* Ancho ajustado */
+    margin: 5px 0;
+    /* Espaciado entre los campos */
+    border: 2px solid #6b156e;
+}
+
+.login-container input:hover {
+    border: 2px solid #45a049;
+}
+
+.login-container button {
+    width: fit-content;
+    /* Ancho ajustado al contenido */
+    padding: 10px;
+    /* Espaciado reducido */
+    box-sizing: border-box;
+    background-color: #6b156e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px auto 20px;
+}
+
+.login-container button:hover {
+    background-color: #45a049;
+}
+
+.login-container p {
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000;
+    background-color: rgba(0, 0, 0, 0.5);}
+
+.login-container a {
+    font-weight: bold;
+    color: #black;
+}
+
+.login-container a:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para el userProfile */
+.profile-container {
+    top: 12%;
+    position: absolute;
+    width: 50%;
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 15px;
+    /* Espacio entre los divs */
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    /* Sombra de texto para mejor legibilidad */
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.profile-container h1 {
+    background-image: url('images/fondoMatches2.png');
+    background-size: cover;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    font-size: 60px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.user-data {
+    position: absolute;
+    width: 50%;
+    top: 28%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 1px 15px;
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+}
+
+.user-data p {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.edit-profile-button {
+    position: absolute;
+    top: 58%;
+    background-color: #6b156e;
+    color: white;
+    padding: 20px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.edit-profile-button:hover {
+    background-color: #45a049;
+}
+
+.profile-panel {
+    position: absolute;
+    width: 50%;
+    top: 67%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 15px;
+    color: #fff;
+}
+
+.profile-panel .panel-button {
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    /* Sombra de texto para mejor legibilidad */
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 15px;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 5px;
+    flex: 1;
+}
+
+.profile-panel .panel-button.active {
+    background-image: url('images/fondoMatches2.png');
+    background-size: cover;
+}
+
+.userHoops {
+    height: 330px;
+    position: absolute;
+    width: 50%;
+    top: 80%;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 15px;
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+    max-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    overflow-y: auto;
+}
+
+.userHoops p {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.hoop-item {
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.hoop-item .p {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hoop-image {
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.userComments {
+    height: 330px;
+    position: absolute;
+    width: 50%;
+    top: 80%;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 15px;
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    /* Sombra de texto para mejor legibilidad */
+    font-family: Arial, sans-serif;
+    max-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    overflow-y: auto;
+}
+
+.userComments p {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el texto */
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    border-radius: 5px;
+    /* Bordes redondeados para el texto */
+}
+
+.remove-button {
+    display: block;
+    margin: 10px auto;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #6b156e;
+    color: white;
+}
+
+.verHoopDetailButton {
+    display: block;
+    margin: 10px auto;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.verHoopDetailButton:hover {
+    background-color: #6b156e;
+    color: white;
+}
+
+.verMatchDetailButton {
+    display: block;
+    margin: 10px auto;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.verMatchDetailButton:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+.sendCommentButton {
+    display: block;
+    margin: 10px auto;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sendCommentButton:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+.structure {
+    overflow: auto;
+    overflow-y: auto;
+}
+
+.userMatches {
+    height: 330px;
+    position: absolute;
+    width: 50%;
+    top: 80%;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 15px;
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    /* Sombra de texto para mejor legibilidad */
+    font-family: Arial, sans-serif;
+    max-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    overflow-y: auto;
+}
+
+.userMatches p {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el texto */
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    border-radius: 5px;
+}
+
+.match-item {
+    margin-top: 15px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* Elementos en columna */
+    align-items: center;
+    /* Centrar los elementos interiormente */
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    margin-bottom: 5px;
+    /* Espacio entre cada item */
+    border: 1px solid #ddd;
+    /* Borde ligero */
+    padding: 10px;
+    /* Espacio interior */
+    box-sizing: border-box;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+}
+
+.match-image {
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.match-finished-item {
+    margin-top: 15px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* Elementos en columna */
+    align-items: center;
+    /* Centrar los elementos interiormente */
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    margin-bottom: 5px;
+    /* Espacio entre cada item */
+    border: 1px solid #ddd;
+    /* Borde ligero */
+    padding: 10px;
+    /* Espacio interior */
+    box-sizing: border-box;
+    /* Incluir padding y border en el width y height */
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+}
+
+.match-finished-image {
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    /* Opcional, para bordes redondeados en la imagen */
+}
+
+.comment-item {
+    margin-top: 15px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* Elementos en columna */
+    align-items: center;
+    /* Centrar los elementos interiormente */
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    margin-bottom: 5px;
+    /* Espacio entre cada item */
+    border: 1px solid #ddd;
+    /* Borde ligero */
+    padding: 10px;
+    /* Espacio interior */
+    box-sizing: border-box;
+    /* Incluir padding y border en el width y height */
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+}
+
+.comment-image {
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    /* Opcional, para bordes redondeados en la imagen */
+}
+
+.header {
+    position: fixed;
+    /* O 'absolute' si prefieres */
+    right: 100px;
+}
+
+.header a {
+    margin-left: 4px;
+}
+
+.header a:hover {
+    color: #45a049;
+}
+
+/* Estilo para el modal */
+/* Estilo para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: -5%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-content {
+background-image: url('images/fondoMatches.png');
+    background-size: cover;    width: 50%;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    font-size: 20px;
+    color: #fff;
+}
+
+.modal-content h1 {
+    background-image: url('images/fondoMatches2.png');
+    background-size: cover;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 1;
+}
+
+.modal-content input {
+    font-size: 20px;
+}
+
+.modal-content select {
+    font-size: 20px;
+}
+
+.modal-content option {
+    font-size: 20px;
+}
+
+.modal-content button {
+    font-size: 20px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Estilo para el formulario */
+#editProfileForm {
+    margin-top: 20px;
+}
+
+.save-button {
+    display: block;
+    margin: 20px auto;
+    background-color: #6b156e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para labels y selects en el formulario */
+#editProfileForm label, #editProfileForm select, #editProfileForm input {
+    display: block;
+    margin: 4px 0;
+    /* Espaciado arriba y abajo */
+    width: 100%;
+    /* Ocupa el ancho total disponible */
+}
+
+#editProfileForm input, #editProfileForm select {
+    margin-bottom: 8px;
+    /* Espacio adicional debajo de inputs y selects */
+}
+
+nav {
+    position: absolute;
+    top: 0%;
+    /* Alinearlo en la parte superior */
+    width: 100%;
+    /* Ancho completo */
+    height: 10%;
+    z-index: 1000;
+    display: flex;
+    /* Usar flexbox */
+    justify-content: space-between;
+    /* Espacio entre los elementos */
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 2px solid #6b156e;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    /* Centra los enlaces */
+    width: 100%;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav-links li {
+    margin: 4px;
+}
+
+.nav-links a {
+    color: #6b156e;
+}
+
+.nav-links a:hover {
+    color: #45a049;
+}
+
+.header {
+    display: flex;
+    /* Usar flexbox */
+    align-items: center;
+    margin: 4px;
+}
+
+/* Estilo para el hoopsMap*/
+#mapa {
+    position: relative;
+    z-index: 1000;
+    margin-top: 60px;
+}
+
+/* Estilo para el hoopDetail */
+.hoopDetail-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.create-match-button {
+    background-color: #6b156e;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    padding: 20px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    /* Espacio por encima */
+    margin-right: 10px;
+}
+
+.create-match-button:hover {
+    background-color: #45a049;
+}
+
+.filters-button {
+    background-color: #6b156e;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    padding: 20px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    /* Espacio por encima */
+    margin-left: 20px;
+}
+
+.filters-button:hover {
+    background-color: #45a049;
+}
+
+.removeFilter-button {
+    background-color: #6b156e;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    padding: 20px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    /* Espacio por encima */
+    margin-left: 20px;
+    display: none;
+}
+
+.removeFilter-button:hover {
+    background-color: #45a049;
+}
+
+.add-to-fav-button {
+    background-color: #6b156e;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    padding: 10px 20px;
+    /* Espaciado interno */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cursor tipo puntero */
+    font-size: 16px;
+    margin-bottom: 10px;
+    /* Espacio por debajo */
+}
+
+.add-to-fav-button:hover {
+    background-color: #45a049;
+}
+
+.hoop-container {
+    top: 12%;
+    position: absolute;
+    width: 50%;
+    padding: 15px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.hoop-container h1 {
+    background-image: url('images/fondoMatches2.png');
+    background-size: cover;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    font-size: 60px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.HoopData-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Dos columnas */
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 1px 15px;
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+    margin-left: -2%;
+}
+
+.HoopData-container p {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.hoop-detail-panel {
+    position: absolute;
+    width: 50%;
+    top: 78%;
+    display: flex;
+    justify-content: center;
+    /* Centra los botones horizontalmente */
+    align-items: center;
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 15px;
+    color: #fff;
+}
+
+.hoop-detail-panel .panel-button {
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    /* Sombra de texto para mejor legibilidad */
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 15px;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 5px;
+    /* Margen de 2px en total entre botones */
+    flex: 1;
+}
+
+.hoop-detail-panel .panel-button.active {
+    background-image: url('images/fondoMatches2.png');
+    background-size: cover;
+}
+
+.hoopDetailMatches {
+    height: 250px;
+    position: absolute;
+    width: 50%;
+    top: 90%;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 15px;
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    /* Sombra de texto para mejor legibilidad */
+    font-family: Arial, sans-serif;
+    max-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    overflow-y: auto;
+}
+
+.hoopDetailMatches p {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el texto */
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    border-radius: 5px;
+}
+
+.hoopDetailComments {
+    height: 250px;
+    position: absolute;
+    width: 50%;
+    top: 90%;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 15px;
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    /* Sombra de texto para mejor legibilidad */
+    font-family: Arial, sans-serif;
+    max-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    overflow-y: auto;
+}
+
+.hoopDetailComments p {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el texto */
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    border-radius: 5px;
+}
+
+/*estilo para los matches*/
+.filter-tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1;
+}
+
+.filterMatchesContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.filterMatches-content {
+    width: 50%;
+    margin: 7% auto;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    font-size: 20px;
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+}
+
+.filterMatches-content h1 {
+    background-image: url('images/fondoMatches2.png');
+    background-size: cover;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 7%;
+    z-index: 1;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#filterMatchesForm {
+    margin-top: 20px;
+}
+
+.filterMatchesDate {
+    font-size: 20px;
+}
+
+#filterMatchesForm label, #filterMatchesForm select, #filterMatchesForm input {
+    display: block;
+    margin: 4px 0;
+    /* Espaciado arriba y abajo */
+    width: 100%;
+    /* Ocupa el ancho total disponible */
+}
+
+#filterMatchesForm input, #filterMatchesForm select {
+    margin-bottom: 8px;
+    /* Espacio adicional debajo de inputs y selects */
+}
+
+.matches-container {
+    padding: 15px;
+    overflow-y: scroll;
+    width: 50%;
+    margin-top: 7%;
+}
+
+.matches-container h1 {
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 7%;
+    z-index: 1;
+}
+
+.specific-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10%;
+}
+
+.matches-finished-container {
+    padding: 15px;
+    overflow-y: scroll;
+    max-height: 88%;
+    width: 30%;
+}
+
+.matches-finished-container h1 {
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 7%;
+    z-index: 1;
+}
+
+.match {
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    /* Espacio entre los divs */
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    /* Sombra de texto para mejor legibilidad */
+    font-family: Arial, sans-serif;
+    /* Tipo de letra */
+}
+
+.match p {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el texto */
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    border-radius: 5px;
+    /* Bordes redondeados para el texto */
+    margin-bottom: 10px;
+}
+
+.match button {
+    display: block;
+    margin: 10px auto;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.match button:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+.matchFinished {
+    background-image: url('images/fondoMatches2.png');
+    background-size: cover;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    /* Espacio entre los divs */
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+}
+
+.matchFinished p {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el texto */
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    border-radius: 5px;
+    /* Bordes redondeados para el texto */
+    margin-bottom: 10px;
+}
+
+.matchFinished button {
+    display: block;
+    margin: 10px auto;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.matchFinished button:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+.createMatch {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    padding: 15px;
+    margin-bottom: 15px;
+    /* Espacio entre los divs */
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    /* Sombra de texto para mejor legibilidad */
+    font-family: Arial, sans-serif;
+    /* Tipo de letra */
+}
+
+.createMatch h1 {
+    background-image: url('images/fondoMatches2.png');
+    background-size: cover;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 1;
+}
+
+.createMatch p {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el texto */
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    border-radius: 5px;
+    /* Bordes redondeados para el texto */
+    margin-bottom: 10px;
+}
+
+.createMatch label {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el texto */
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    border-radius: 5px;
+    /* Bordes redondeados para el texto */
+    margin-bottom: 10px;
+}
+
+.createMatch button {
+    display: block;
+    margin: 10px auto;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.createMatch button:hover {
+    background-color: #6b156e;
+    color: white;
+}
+
+.createMatch input {
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+.createMatchForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Dos columnas */
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 10px 50px;
+    /* Espacio entre elementos de la grilla */
+}
+
+.createMatch-close-button {
+    position: absolute;
+    top: 10px;
+    /* Controla la distancia desde la parte superior del div */
+    right: 10px;
+    /* Controla la distancia desde la parte derecha del div */
+    cursor: pointer;
+    /* Cambia el cursor a una mano para indicar que es interactivo */
+    font-size: 20px;
+}
+
+
+.specific-container {
+    display: flex;
+    flex-direction: column;
+    /* Alinea los elementos uno debajo del otro */
+    align-items: flex-start;
+    /* Alinea los elementos al inicio del contenedor */
+    margin-bottom: 10px;
+}
+
+.selectedHoopDiv {
+    background-image: url('images/fondoMatches2.png');
+    background-size: cover;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+    display: none;
+}
+
+.selectHoopList {
+    margin-top: 10%;
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    background-position: center bottom;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    /* Espacio entre los divs */
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    /* Sombra de texto para mejor legibilidad */
+    font-family: Arial, sans-serif;
+    overflow-y: scroll;
+}
+
+.selectHoopList p {
+    width: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el texto */
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    border-radius: 5px;
+    /* Bordes redondeados para el texto */
+    margin-bottom: 1px;
+}
+
+.selectHoopList div {
+    background-image: url('images/fondoMatches2.png');
+    background-size: cover;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+    position: sticky;
+    z-index: 1;
+}
+
+.selectHoopList button {
+    display: block;
+    margin: 10px auto;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.selectHoopList button:hover {
+    background-color: #6b156e;
+    color: white;
+}
+
+.selectHoopList h1 {
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/*estilo para el match-detail*/
+.match-detail-container {
+    top: 12%;
+    position: absolute;
+    /* Necesario para posicionar el pseudo-elemento */
+    border: 1px solid #fff;
+    border-radius: 10px;
+    width: 70%;
+    padding: 15px;
+    margin-bottom: 15px;
+    /* Espacio entre los divs */
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-y: auto;
+}
+
+.match-detail-container::before {
+    border-radius: 10px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    z-index: -1;
+}
+
+.match-detail-container h1 {
+    background-image: url('images/fondoMatches2.png');
+    background-size: cover;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 1;
+}
+
+.match-info {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    /* Dos columnas */
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 5px 15px;
+    /* Espacio entre elementos de la grilla */
+    padding: 15px;
+    margin-bottom: 15px;
+    /* Espacio entre los divs */
+    color: white;
+    /* Sombra de texto para mejor legibilidad */
+    font-family: Arial, sans-serif;
+}
+
+.match-info label {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el texto */
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    border-radius: 5px;
+    height: 30px;
+}
+
+.match-info p {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    height: 30px;
+}
+
+.match-apuntarse-button {
+    margin-bottom: 15px;
+    background-color: #6b156e;
+    color: white;
+    padding: 20px 15px;
+    display: block;
+    margin: 15px auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.match-apuntarse-button:hover {
+    background-color: #45a049;
+}
+
+.hoop-info {
+    width: 40%;
+    margin: 0 auto;
+    /* Centra el elemento horizontalmente */
+    text-align: center;
+    background-image: url('images/fondoMatches2.png');
+    background-size: cover;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+}
+
+.hoop-info button {
+    display: block;
+    margin: 10px auto;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hoop-info button:hover {
+    background-color: #6b156e;
+    color: white;
+}
+
+.hoop-info p {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el texto */
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    border-radius: 5px;
+    /* Bordes redondeados para el texto */
+    margin-bottom: 10px;
+}
+
+.players-list label {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Fondo semitransparente para el texto */
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    border-radius: 5px;
+    /* Bordes redondeados para el texto */
+}
+
+.players-list a {
+    color: white;
+    text-decoration: underline;
+}
+
+.players-list div {
+    display: flex;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el texto */
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    border-radius: 5px;
+    /* Bordes redondeados para el texto */
+    margin-top: 15px;
+}
+
+.removePlayerButton {
+    margin-bottom: 15px;
+    background-color: #6b156e;
+    color: white;
+    padding: 20px 15px;
+    margin: 15px auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 25px;
+    display: flex;
+    align-content: center;
+    text-align: center;
+}
+
+.removePlayerButton:hover {
+    background-color: #45a049;
+}
+
+.finishMatchButton {
+    margin-bottom: 15px;
+    background-color: #45a049;
+    color: white;
+    padding: 20px 15px;
+    margin: 15px auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 25px;
+    display: flex;
+    align-content: center;
+    text-align: center;
+}
+
+.finishMatchButton:hover {
+    background-color: #6b156e;
+}
+
+.sendCommentsButton {
+    margin-bottom: 15px;
+    background-color: #45a049;
+    color: white;
+    padding: 20px 15px;
+    margin: 15px auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 25px;
+    display: flex;
+    align-content: center;
+    text-align: center;
+}
+
+.sendCommentsButton:hover {
+    background-color: #6b156e;
+}
+
+.player-item {
+    display: flex;
+    align-items: center;
+    height: 35px;
+
+}
+
+.player-item button {
+    margin-left: 30px;
+}
+
+.comments-container {
+    top: 12%;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-image: url('images/fondoMatches.png');
+    background-size: cover;
+    padding: 15px;
+    margin-bottom: 15px;
+    /* Espacio entre los divs */
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    /* Sombra de texto para mejor legibilidad */
+    font-family: Arial, sans-serif;
+    display: none;
+}
+
+.comments-container h1 {
+    background-image: url('images/fondoMatches2.png');
+    background-size: cover;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 1;
+}
+
+.comments-container p {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el texto */
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    border-radius: 5px;
+    /* Bordes redondeados para el texto */
+    margin-bottom: 10px;
+}
+
+.comments-container button {
+    display: block;
+    margin: 20px auto;
+    background-color: #6b156e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comments-container button:hover {
+    background-color: #45a049;
+}
+
+.hoopDivComment {
+    padding: 15px;
+    margin-bottom: 15px;
+    /* Espacio entre los divs */
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    /* Sombra de texto para mejor legibilidad */
+    font-family: Arial, sans-serif;
+    /* Tipo de letra */
+}
+
+.hoopDivComment p {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el texto */
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    border-radius: 5px;
+    /* Bordes redondeados para el texto */
+    margin-bottom: 10px;
+}
+
+.hoopDivComment input {
+    border: 1px solid #fff;
+    border-radius: 10px;/
+}
+
+.hoopDivComment button {
+    display: block;
+    margin: 10px auto;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hoopDivComment button:hover {
+    background-color: #6b156e;
+    color: white;
+}
+
+.doneWithCommentsButton button {
+    display: block;
+    margin: 10px auto;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.doneWithCommentsButton button:hover {
+    background-color: #6b156e;
+    color: white;
+}
+
+.globalDivComment {
+    background-image: url('images/fondoMatches2.png');
+    background-size: cover;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    /* Espacio entre los divs */
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    /* Sombra de texto para mejor legibilidad */
+    font-family: Arial, sans-serif;
+    /* Tipo de letra */
+}
+
+.globalDivComment p {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el texto */
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    border-radius: 5px;
+    /* Bordes redondeados para el texto */
+    margin-bottom: 10px;
+}
+
+.globalDivComment input {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el texto */
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    border-radius: 5px;
+    /* Bordes redondeados para el texto */
+    margin-bottom: 10px;
+    display: table-cell;
+    color: white;
+}
+
+.globalDivComment button {
+    display: block;
+    margin: 10px auto;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.globalDivComment button:hover {
+    background-color: #6b156e;
+    color: white;
+}
+
+.commentDiv0 {
+    padding: 15px;
+    margin-bottom: 15px;
+    /* Espacio entre los divs */
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    /* Sombra de texto para mejor legibilidad */
+    font-family: Arial, sans-serif;
+    /* Tipo de letra */
+}
+
+.commentDiv0 p {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el texto */
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    border-radius: 5px;
+    /* Bordes redondeados para el texto */
+    margin-bottom: 10px;
+}
+
+.commentDiv0 button {
+    display: block;
+    margin: 10px auto;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.commentDiv0 button:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+.commentDiv {
+    padding: 15px;
+    margin-bottom: 15px;
+    /* Espacio entre los divs */
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    /* Sombra de texto para mejor legibilidad */
+    font-family: Arial, sans-serif;
+}
+
+.commentDiv p {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el texto */
+    padding: 5px;
+    /* Espaciado interno para el texto */
+    border-radius: 5px;
+    /* Bordes redondeados para el texto */
+    margin-bottom: 10px;
+}
+
+.commentDiv input {
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+.commentDiv button {
+    display: block;
+    margin: 10px auto;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.commentDiv button:hover {
+    background-color: #6b156e;
+    color: white;
+}
+
+.showUserInfo {
+    display: none
+}
+
+.closePanel{
+    position: absolute;
+    top: 10%;
+    /* Controla la distancia desde la parte superior del div */
+    right: 20%;
+    /* Controla la distancia desde la parte derecha del div */
+    cursor: pointer;
+    /* Cambia el cursor a una mano para indicar que es interactivo */
+    font-size: 30px;
+}
+
+.closePanel {
+    margin-bottom: 15px;
+    background-color: #6b156e;
+    color: white;
+    padding: 20px 15px;
+    margin: 15px auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 25px;
+    display: flex;
+    align-content: center;
+    text-align: center;
+}
+
+.closePanel:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 1024px) {
+    nav{
+        font-size: 25px;
+        border-bottom: 2px;
+    }
+    .header{
+        top: 2%;
+        left: 15%;
+    }
+    .profile-container{
+        width: 80%;
+    }
+    .profile-container h1{
+        font-size: 30px;
+    }
+    .user-data{
+        top: 20%;
+        width: 80%;
+    }
+    .edit-profile-button {
+        top: 50%;
+    }
+    .profile-panel{
+        top: 60%;
+        width: 80%;
+    }
+    .userMatches {
+        top: 70%;
+        width: 80%;
+    }
+    .userHoops{
+        width: 80%;
+    }
+    .userComments{
+        width: 80%;
+    }
+
+    /*matches*/
+    .matches-container {
+        position: absolute;
+        width: 80%;
+        top: 10%;
+    }
+    .matches-container h1{
+        position: absolute;
+        width: 100%;
+        top: 4%;
+        border-radius: 10px;
+        font-size: 25px;
+    }
+
+    .match{
+        position: absolute;
+        top: 9%;
+
+    }
+
+    #MatchesFinished{
+        top: 40%;
+    }
+    .matchFinished{
+        top: 50%;
+        position: static;
+        width: 100%;
+    }
+
+    /*HoopDetail*/
+    .hoop-container{
+        width: 80%;
+    }
+    .hoop-detail-panel{
+        width: 80%;
+    }
+    .hoopDetailMatches{
+        width: 80%;
+        top: 88%;
+    }
+    .background_image{
+        height: 150%;
+    }
+    .hoopDetailComments{
+        width: 80%;
+        top: 88%;
+    }
+}

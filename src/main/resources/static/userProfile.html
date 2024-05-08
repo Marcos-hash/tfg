@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>User Profile</title>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-links">
+            <ul>
+                <li><a id="profileLink" href="#"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a id="matchesLink" href="#"><i class="fas fa-basketball-ball"></i> Matches</a></li>
+                <li><a id="hoopsLink" href="#"><i class="fas fa-map-marked-alt"></i> HoopsMap</a></li>
+            </ul>
+        </div>
+        <div class="header">
+            <span id="profileName"></span>
+            <a href="index.html" class="logout-link">Log Out</a>
+        </div>
+    </nav>
+
+    <div class="background_image">
+        <img src="images/imagen%20fondo.png" alt="Imagen de Fondo">
+    </div>
+
+    <div id="profileContainer" class="profile-container">
+        <h1>This is your Profile</h1>
+    </div>
+
+<div class="structure">
+
+    <div id="userData" class="user-data">
+
+        <p id="nickname">Nickname: </p>
+        <p id="age">Age: </p>
+        <p id="email">Email: </p>
+        <p id="physical">Physical: </p>
+        <p id="position">Position: </p>
+        <p id="level">Level: </p>
+    </div>
+
+    <div>
+        <button id="editProfileButton" onclick="editProfile()" class="edit-profile-button">Edit Profile</button>
+    </div>
+
+
+
+    <div id="profilePanel" class="profile-panel">
+        <button id="MatchesMenu" class="panel-button active">Matches</button>
+        <button id="HoopsMenu" class="panel-button">Hoops</button>
+        <button id="CommentsMenu" class="panel-button">Comments</button>
+    </div>
+
+    <div id="userMatchesId" class="userMatches"></div>
+    <div id="userHoopsId" class="userHoops"></div>
+    <div id="userCommentsId" class="userComments"></div>
+</div>
+
+
+
+
+
+
+    <!-- Modal de edición de perfil -->
+    <div id="editProfileModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <h1>Edit Profile</h1>
+            <form id="editProfileForm">
+                <label for="modalNickname">Nickname:</label>
+                <input type="text" id="modalNickname" name="nickname" class="required">
+
+                <label for="modalAge">Age:</label>
+                <input type="number" id="modalAge" name="age" class="required">
+
+                <label for="modalEmail">Email:</label>
+                <input type="text" id="modalEmail" name="email" class="required">
+
+                <label for="modalPassword">Password(change if you want):</label>
+                <input type="password" id="modalPassword" name="password" class="required">
+
+                <label for="modalConfirmPassword">Confirm Password(change if you want):</label>
+                <input type="password" id="modalConfirmPassword" name="password">
+
+                <label for="modalPosition">Position:</label>
+                <select id="modalPosition" name="position" class="required">
+                    <option value="Base">Base</option>
+                    <option value="Escolta">Escolta</option>
+                    <option value="Alero">Alero</option>
+                    <option value="Alero-Pivot">Alero-Pivot</option>
+                    <option value="Pivot">Pivot</option>
+                </select>
+
+                <label for="modalLevel">Level:</label>
+                <select id="modalLevel" name="level" class="required">
+                    <option value="Disaster">Disaster</option>
+                    <option value="Rookie">Rookie</option>
+                    <option value="Amateur">Amateur</option>
+                    <option value="Competitive">Competitive</option>
+                    <option value="All-Star">All-Star</option>
+                </select>
+
+                <label for="modalPhysical">Physical:</label>
+                <select id="modalPhysical" name="physical" class="required">
+                    <option value="Really-bad">Really-bad</option>
+                    <option value="Bad">Bad</option>
+                    <option value="Average">Average</option>
+                    <option value="Athletic">Athletic</option>
+                    <option value="Fantastic">Fantastic</option>
+                </select>
+
+                <button type="button" class="save-button">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+<script src="js/userProfile.js"></script>
+</html>

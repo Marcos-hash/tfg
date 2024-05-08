@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>APPBasket - Welcome</title>
+    <link rel="manifest" href="./manifest.json">
+    <script>
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("sw.js");
+        }
+    </script>
+</head>
+<body>
+<div class="index">
+    <h1>Welcome to APPBasket2</h1>
+    <p>The best way to play basketball for free with the people around you</p>
+    <p>To start, please <button onclick="location.href='register.html'">register</button> if you haven´t done it yet, or <button onclick="location.href='login.html'">log in</button>.</p>
+</div>
+
+<div class="image">
+    <img src="images/index.png" alt="Imagen de Fondo">
+</div>
+</body>
+</html>

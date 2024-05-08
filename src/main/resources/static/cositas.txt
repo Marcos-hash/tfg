@@ -1,0 +1,66 @@
+//hoopDetail
+lunes - meterle sus matches y comments
+
+//userprofile
+viernes - poner bootstraps en el userpanel
+
+//register
+estilo
+mirar el tema del correo
+
+
+//match
+-martes - filtrar los matches por criterios (como el level) - meterle el dato de nivel a los jugadores
+-miercoles - el organizador decide si expulsa o no a los que no le guste
+-cuando el organizador cree un partido, solo él lo puede dar por finalizado o la aplicacion si se ha pasado la fecha,
+y cuando eso pase, podemos dejar comments.
+
+-jueves - no puedo acceder al perfil de otro jugador porque se lo modifico - que se vean sus caract y sus comments
+-los hoops favs en create match que se vean hacia abajo
+-controlar que no se puedan apuntar a un partido mas del num_max
+
+cuando creo un match, al ser un prototipo, sólo seleccionamos de entre las canchas favoritas
+cuando creo un match, hay un mini fallo porque al no actualizarse el hoopId a tiempo,
+primero dá fallo y luego se corrige y funciona al momento.
+
+-habría que ver como hacemos cuando el partido se finaliza
+-he creado un match pero no se me ha añadido automáticamente el organizer - falta hacerle un reload;
+-en edit profile, corregir los campos
+-cuando vemos el perfil de alguien, que apezcan sus comments
+en la cancha comments, poner el nombre, no el id
+-cuando elegimos canastas para crear un partido. podía hacer que en caso de no tener favoritas,
+que aparezca el listado de todas
+
+QUITAR PESTAÑA COMENTS EN MATCH
+
+mismo formato de color en todas las ventanas
+los detalles de la canasta mejorarlos
+agrandar las ventanas de comments como el de profile
+ponerle un fondo a esa ventana de comments
+
+
+me falta la opcion de desapuntarme de un partido en la pantalla del partido, cambiando el botón de 'Join Up'
+
+pantallas de movil
+
+PANTALLAS
+register
+video user profile
+cmabiar perfil
+hoops map
+details map
+matches
+crear partido (haber creado otro)
+filter match
+log out - entrar Esther login - match-view details - join up
+(haber metido a más jugadores)
+video finalizar match - comments
+fotos mostrando comments en los perfiles de la canasta y user
+
+
+
+
+
+
+
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Next Matches</title>
+
+</head>
+<body>
+
+    <nav>
+        <div class="nav-links">
+            <ul>
+                <li><a id="profileLink" href="#"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a id="matchesLink" href="#"><i class="fas fa-basketball-ball"></i> Matches</a></li>
+                <li><a id="hoopsLink" href="#"><i class="fas fa-map-marked-alt"></i> HoopsMap</a></li>
+            </ul>
+        </div>
+        <div class="header">
+            <span id="profileName"></span>
+            <a href="index.html" class="logout-link">Log Out</a>
+        </div>
+    </nav>
+
+    <div class="background_image">
+        <img src="images/imagen%20fondo.png" alt="Imagen de Fondo">
+    </div>
+
+    <div class="matches-container">
+        <div class="specific-container2">
+            <button type="button" class="create-match-button" href="#">Create Match</button>
+            <button type="button" onclick="filterMatches()" class="filters-button">Filter Search</button>
+            <button type="button" class="removeFilter-button">Remove Filter</button>
+        </div>
+        <h1 id="MatchesCommented">Nexts Matches</h1>
+        <!-- Contenedor para los partidos -->
+        <div id="matchesList" class="matches-list">
+            <!-- Los partidos se cargarán aquí dinámicamente -->
+        </div>
+
+
+        <h1 id="MatchesFinished">Matches Finished</h1>
+        <!-- Contenedor para los partidos -->
+        <div id="matchesFinishedList" class="matches-finished-list">
+            <!-- Los partidos finalizados se cargarán aquí dinámicamente -->
+        </div>
+
+    </div>
+
+
+
+
+    <!-- Modal de edición de perfil -->
+    <div id="createMatchModal" class="createMatch">
+            <h1>Create a Match</h1>
+            <span class="createMatch-close-button">×</span>
+            <form id="createMatchForm" class="createMatchForm">
+                <label for="createMatchName">Match Name:</label>
+                <input type="text" id="createMatchName" name="name" class="required">
+
+                <label for="createMatchDescription">Description:</label>
+                <input type="text" id="createMatchDescription" name="description" class="required">
+
+                <label for="createMatchDate">Date:</label>
+                <input type="date" id="createMatchDate" name="date" class="required">
+
+                <label for="createMatchHour">Hour:</label>
+                <input type="time" id="createMatchHour" name="hour" class="required">
+
+                <div class="specific-container">
+                    <div class="specific-container2">
+                        <label for="createMatchFormat">Format:</label>
+                        <select id="createMatchFormat" name="format" class="required">
+                            <option value="2vs2">2vs2</option>
+                            <option value="3vs3">3vs3</option>
+                            <option value="4vs4">4vs4</option>
+                            <option value="5vs5">5vs5</option>
+                        </select>
+                    </div>
+                    <div class="specific-container2">
+                        <label>Hoop:</label>
+                        <button type="button" onclick="selectHoop()" class="selectHoop-button">Favourites Hoops</button>
+                        <div id="selectedHoop-info" class="selectedHoopDiv">
+                            <!-- Información del Hoop se cargará aquí -->
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        <button type="button" class="confirmMatch-button">Confirm Match</button>
+    </div>
+
+
+    <div id="selectHoop-info" class="selectHoopList">
+        <!-- Información de los Hoop se cargará aquí -->
+    </div>
+
+    <!-- Modal de edición de perfil -->
+    <div id="filterMatchesContainer" class="filterMatchesContainer">
+        <div class="filterMatches-content">
+            <span class="close-button">×</span>
+            <h1>Filter Matches</h1>
+            <h3>Fill only 1 field to filter the matches you are looking for</h3>
+            <form id="filterMatchesForm">
+                <label for="filterMatchesName">Match name:</label>
+                <input type="text" id="filterMatchesName" name="Match name" class="filterMatchesName">
+
+                <label for="filterMatchesDate">Date:</label>
+                <input type="date" id="filterMatchesDate" name="Date" class="filterMatchesDate">
+
+                <label for="filterMatchesFormat">Format:</label>
+                <select id="filterMatchesFormat" name="Format" class="filterMatchesFormat">
+                    <option value=""></option>
+                    <option value="2vs2">2vs2</option>
+                    <option value="3vs3">3vs3</option>
+                    <option value="4vs4">4vs4</option>
+                    <option value="5vs5">5vs5</option>
+                </select>
+
+                <button type="button" class="filters-button">Apply Filters</button>
+            </form>
+        </div>
+    </div>
+
+
+<script src="js/matches.js"></script>
+</body>
+</html>

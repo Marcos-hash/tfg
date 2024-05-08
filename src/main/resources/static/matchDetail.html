@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title id="match-name-title"></title>
+</head>
+<body>
+
+    <div class="background_image">
+        <img src="images/imagen%20fondo.png" alt="Imagen de Fondo">
+    </div>
+
+    <nav>
+        <div class="nav-links">
+            <ul>
+                <li><a id="profileLink" href="#"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a id="matchesLink" href="#"><i class="fas fa-basketball-ball"></i> Matches</a></li>
+                <li><a id="hoopsLink" href="#"><i class="fas fa-map-marked-alt"></i> HoopsMap</a></li>
+            </ul>
+        </div>
+        <div class="header">
+            <span id="profileName"></span>
+            <a href="index.html" class="logout-link">Log Out</a>
+        </div>
+    </nav>
+
+    <div class="match-detail-container">
+
+        <h1 id="match-detail-name"></h1>
+
+        <div class="match-info">
+            <label>Date and Hour:</label>
+            <p id="match-date-time"></p>
+            <label>Organizer: </label>
+            <p id="match-organizer"></p>
+            <label>Description: </label>
+            <p id="match-description"></p>
+        </div>
+
+        <div id="hoop-info" class="hoop-info">
+            <!-- Información del Hoop se cargará aquí -->
+        </div>
+        <button class="match-apuntarse-button">Join up</button>
+
+        <div id="players-list" class="players-list">
+            <!-- Lista de jugadores se cargará aquí -->
+            <label>Players: </label>
+            <div id="confirmBox" class="confirmBox" style="display:none">
+                <div id="confirmBoxContent" class="confirmBoxContent">
+                    <p>Do you really want to finish the match?</p>
+                    <button id="confirmYes">Yes</button>
+                    <button id="confirmNo">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="comments-container">
+        <h1>Write On a Comment</h1>
+        <p>Send a comment about the hoop you played in,
+            or to any of the users you play with,
+        and it will appear on their public profile</p>
+        <!-- Contenedor para los partidos -->
+        <div id="commentsList" class="commentsList">
+            <!-- Los partidos se cargarán aquí dinámicamente -->
+        </div>
+    </div>
+
+
+    <div class="showUserInfo">
+
+        <span id="closePanel" onclick="closePanel()" class="closePanel">×</span>
+        <div id="profileContainer" class="profile-container">
+            <h1>This is your Profile</h1>
+        </div>
+
+
+        <div id="userData" class="user-data">
+            <p id="nickname">Nickname: </p>
+            <p id="age">Age: </p>
+            <p id="email">Email: </p>
+            <p id="physical">Physical: </p>
+            <p id="position">Position: </p>
+            <p id="level">Level: </p>
+        </div>
+
+
+        <div id="profilePanel" class="profile-panel">
+            <button id="MatchesMenu" class="panel-button active">Matches</button>
+            <button id="HoopsMenu" class="panel-button">Hoops</button>
+            <button id="CommentsMenu" class="panel-button">Comments</button>
+        </div>
+
+        <div id="userMatchesId" class="userMatches"></div>
+        <div id="userHoopsId" class="userHoops"></div>
+        <div id="userCommentsId" class="userComments"></div>
+    </div>
+
+<script src="js/matchDetail.js"></script>
+</body>
+</html>

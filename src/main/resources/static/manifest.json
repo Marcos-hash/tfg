@@ -1,0 +1,17 @@
+{
+  "name": "APPBasket",
+  "short_name": "APPBasket",
+  "theme_color": "#6b156e",
+  "background_color": "#45a049",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+    {
+      "src": "./imagen_fondo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
